@@ -1,0 +1,192 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            background-color: #fff;
+            overflow-x: hidden; 
+        }
+
+        :root {
+            --primary-blue: #484b9b;
+            --primary-orange: #ff5630;
+            --dark-orange: #e04826;
+            --input-bg: #f9f9f9;
+            --text-dark: #333;
+        }
+
+        .left-sidebar {
+            width: 45%;
+            background-color: var(--primary-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .left-sidebar::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background-color: var(--primary-orange);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+
+        .brand-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand-content h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .brand-content p {
+            font-size: 16px;
+            opacity: 0.9;
+            line-height: 1.6;
+            max-width: 400px;
+        }
+
+        
+        .right-form-section {
+            width: 55%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            overflow-y: auto; 
+        }
+
+        .register-box {
+            width: 100%;
+            max-width: 450px;
+            padding: 20px 0;
+        }
+
+        .form-header {
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .form-header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            background-color: var(--input-bg);
+            font-size: 14px;
+            color: var(--text-dark);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        
+        .form-group input:focus {
+            border-color: var(--primary-orange);
+            background-color: #fff;
+            box-shadow: 0 0 0 3px rgba(255, 86, 48, 0.1);
+        }
+
+        
+        .btn-register {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            background-color: var(--primary-orange);
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 86, 48, 0.2);
+        }
+
+        .btn-register:hover {
+            background-color: var(--dark-orange);
+            transform: translateY(-2px);
+        }
+
+        
+        .form-footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .form-footer a {
+            color: var(--primary-orange);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+       
+        @media (max-width: 960px) {
+            body {
+                flex-direction: column;
+                height: auto; 
+            }
+
+            .left-sidebar {
+                width: 100%;
+                padding: 40px 30px;
+                height: auto;
+                text-align: center;
+            }
+            
+            .brand-content p {
+                margin: 0 auto; 
+            }
+
+            .right-form-section {
+                width: 100%;
+                padding: 40px 25px;
+                height: auto;
+            }
+        }

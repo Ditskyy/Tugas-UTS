@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Akun - Sewa Mobil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="Buat_akunn.css">
+</head>
+<body>
+
+    <div class="left-sidebar">
+        <div class="brand-content">
+            <h1>Bergabunglah Bersama Kami.</h1>
+            <p>Nikmati kemudahan menyewa mobil impian Anda dengan cepat, aman, dan terpercaya. Buat akun Anda sekarang dan mulai perjalanan!</p>
+        </div>
+    </div>
+
+    <div class="right-form-section">
+        <div class="register-box">
+            <div class="form-header">
+                <h2>Buat Akun Baru</h2>
+                <p>Lengkapi data diri Anda untuk mendaftar sebagai penyewa.</p>
+            </div>
+
+            <form action="register_proses.php" method="POST" onsubmit="return validasiPassword()">
+    
+    <div class="form-group">
+        <label for="fullname">Nama Lengkap Sesuai KTP</label>
+        <input type="text" id="fullname" name="nama_lengkap" placeholder="Contoh: Aditya" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Alamat Email</label>
+        <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Nomor Telepon / WhatsApp</label>
+        <input type="tel" id="phone" name="no_telepon" placeholder="Contoh: 08123456789" required>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Minimal 6 karakter" required minlength="6">
+    </div>
+
+    <div class="form-group">
+        <label for="confirm_password">Konfirmasi Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Ketik ulang password" required>
+    </div>
+
+    <button type="submit" class="btn-register">Daftar Sekarang</button>
+</form>
+            <div class="form-footer">
+                Sudah punya akun? <a href="login.html">Login di sini</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validasiPassword() {
+            var pass1 = document.getElementById("password").value;
+            var pass2 = document.getElementById("confirm_password").value;
+            
+            if (pass1 != pass2) {
+                alert("Password dan Konfirmasi Password tidak sama!");
+                return false; 
+            }
+            return true; 
+        }
+    </script>
+
+</body>
+</html>

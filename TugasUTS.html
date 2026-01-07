@@ -283,33 +283,60 @@
         
         <!-- Guestbook -->
         <section class="guestbook">
-            <h2>Guestbook</h2>
-            <form id="guestbook-form">
-                <div class="input-box">
-                    <span>Name</span>
-                    <input type="text" id="name" placeholder="Enter your name" required>
-                </div>
-                <div class="input-box">
-                    <span>Email</span>
-                    <input type="email" id="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-box">
-                    <span>Phone</span>
-                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
-                </div>
-                <div class="input-box">
-                    <span>Message</span>
-                    <textarea id="message" placeholder="Enter your message" required></textarea>
-                </div>
-                <div class="input-box">
-                    <span>Date</span>
-                    <input type="date" id="date" required>
-                </div>
-                <input type="submit" class="btn" value="Submit">
-            </form>
-            <div id="guestbook-entries"></div>
-        </section>
+    <h2>Booking Mobil</h2>
+    
+    <form action="booking_proses.php" method="POST">
+        
+        <div class="input-box">
+            <span>Name</span>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
 
+        <div class="input-box">
+            <span>Email</span>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-box">
+            <span>Phone</span>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="input-box">
+            <span>Jenis Mobil</span>
+            <select name="jenis_mobil" id="jenis_mobil" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background: #f9f9f9;">
+                <option value="" disabled selected>-- Pilih Mobil --</option>
+                <option value="Ferari F8">Ferari F8</option>
+                <option value="Lamborghini Huracan">Lamborghini Huracan</option>
+                <option value="Aston Martin DB12">Aston Martin DB12</option>
+                <option value="Buggati Chairon">Buggati Chairon</option>
+                <option value="Aston Martin Valkyrie">Aston Martin Valkyrie</option>
+                <option value="Porsche">Porsche</option>
+                <option value="Lamborghini Aventador">Lamborghini Aventador</option>
+                <option value="Pagani Huayra">Pagani Huayra</option>
+                <option value="Ferari F40">Ferari F40</option>
+                <option value="Toyota Supra MK4">Toyota Supra MK4</option>
+                <option value="Mazda RX-7">Mazda RX-7</option>
+                <option value="McLeren Senna">McLeren Senna</option>
+                
+            </select>
+        </div>
+
+        <div class="input-box">
+            <span>Message</span>
+            <textarea id="message" name="message" placeholder="Tulis pesan tambahan (lokasi jemput, dll)" required></textarea>
+        </div>
+
+        <div class="input-box">
+            <span>Date</span>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <input type="submit" class="btn" value="Booking Sekarang">
+    
+    </form>
+    
+    </section>
 
          <div class="copyright">
             <p>#169; WiraSuryaAditya All Right reserved</p>
